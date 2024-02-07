@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c940dd77fdf0cf1796cad93ec4507c68 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c940dd77fdf0cf1796cad93ec4507c68" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c940dd77fdf0cf1796cad93ec4507c68 = L.map(
+                "map_c940dd77fdf0cf1796cad93ec4507c68",
+                {
+                    center: [20.0, 84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 7,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c67b09ec3bfeb09459e1fac3aad4697a = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_c67b09ec3bfeb09459e1fac3aad4697a.addTo(map_c940dd77fdf0cf1796cad93ec4507c68);
+        
+    
+            var feature_group_61c83a7e7c2303742859bca057b3aa7c = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_8103b2dc6a73825438d7c99aff6c3e6f = L.marker(
+                [37.83913375, -1.4149624646761159],
+                {}
+            ).addTo(feature_group_61c83a7e7c2303742859bca057b3aa7c);
+        
+    
+            var icon_e279eb6b1946ce1a85f0e4c5fdac1e51 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_8103b2dc6a73825438d7c99aff6c3e6f.setIcon(icon_e279eb6b1946ce1a85f0e4c5fdac1e51);
+        
+    
+        var popup_f6f72b9d473ccf27edfefdd8325ed615 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_cf1940a8837ab3abbc26dc32c9315054 = $(`<div id="html_cf1940a8837ab3abbc26dc32c9315054" style="width: 100.0%; height: 100.0%;"><h2>TONY STARK</h2><br/>                                 <b>Tata Benz</b><br/>                                 <img src="https://example.com/default_image.jpg" alt="Image" style="max-width:100%;max-height:100%"></div>`)[0];
+                popup_f6f72b9d473ccf27edfefdd8325ed615.setContent(html_cf1940a8837ab3abbc26dc32c9315054);
+            
+        
+
+        marker_8103b2dc6a73825438d7c99aff6c3e6f.bindPopup(popup_f6f72b9d473ccf27edfefdd8325ed615)
+        ;
+
+        
+    
+    
+            var marker_fe681ff50649e34179c802b1833df7fd = L.marker(
+                [19.309917300000002, 84.81194562351413],
+                {}
+            ).addTo(feature_group_61c83a7e7c2303742859bca057b3aa7c);
+        
+    
+            var icon_ac13a6751bc43343788a043b112da8f5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_fe681ff50649e34179c802b1833df7fd.setIcon(icon_ac13a6751bc43343788a043b112da8f5);
+        
+    
+        var popup_b7f6c11e8f4ea42754ad594fe65a09b4 = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_b093d8023c7b346a515dc737a0e7d9cc = $(`<div id="html_b093d8023c7b346a515dc737a0e7d9cc" style="width: 100.0%; height: 100.0%;"><h2>om prasad</h2><br/>                                 <b>MKCG Medical College</b><br/>                                 <img src="https://example.com/default_image.jpg" alt="Image" style="max-width:100%;max-height:100%"></div>`)[0];
+                popup_b7f6c11e8f4ea42754ad594fe65a09b4.setContent(html_b093d8023c7b346a515dc737a0e7d9cc);
+            
+        
+
+        marker_fe681ff50649e34179c802b1833df7fd.bindPopup(popup_b7f6c11e8f4ea42754ad594fe65a09b4)
+        ;
+
+        
+    
+    
+            var marker_18c0b0ca5788ffc0f05c0f90ae68296d = L.marker(
+                [19.310606749999998, 84.7886564264401],
+                {}
+            ).addTo(feature_group_61c83a7e7c2303742859bca057b3aa7c);
+        
+    
+            var icon_49beef7ae74a2bb700874345ade76d7d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_18c0b0ca5788ffc0f05c0f90ae68296d.setIcon(icon_49beef7ae74a2bb700874345ade76d7d);
+        
+    
+        var popup_5d24b6a7e4f19ff44816306536117f8f = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_defb596b407080698d93bfee1fde0af6 = $(`<div id="html_defb596b407080698d93bfee1fde0af6" style="width: 100.0%; height: 100.0%;"><h2>om prasad rath</h2><br/>                                 <b> Berhampur Stadium, Berhampur, Odisha, India</b><br/>                                 <img src="https://example.com/default_image.jpg" alt="Image" style="max-width:100%;max-height:100%"></div>`)[0];
+                popup_5d24b6a7e4f19ff44816306536117f8f.setContent(html_defb596b407080698d93bfee1fde0af6);
+            
+        
+
+        marker_18c0b0ca5788ffc0f05c0f90ae68296d.bindPopup(popup_5d24b6a7e4f19ff44816306536117f8f)
+        ;
+
+        
+    
+    
+            feature_group_61c83a7e7c2303742859bca057b3aa7c.addTo(map_c940dd77fdf0cf1796cad93ec4507c68);
+        
+    
+            var layer_control_d0b034d5e28900fa681dd76eed73b530_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_c67b09ec3bfeb09459e1fac3aad4697a,
+                },
+                overlays :  {
+                    "circles" : feature_group_61c83a7e7c2303742859bca057b3aa7c,
+                },
+            };
+            let layer_control_d0b034d5e28900fa681dd76eed73b530 = L.control.layers(
+                layer_control_d0b034d5e28900fa681dd76eed73b530_layers.base_layers,
+                layer_control_d0b034d5e28900fa681dd76eed73b530_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_c940dd77fdf0cf1796cad93ec4507c68);
+
+        
+</script>
+</html>

@@ -1,0 +1,69 @@
+body {
+  background: linear-gradient(to bottom, #004d73, #0084a8); /* Gradient Blue */
+  color: #fff; /* White */
+  font-family: 'Arial', sans-serif;
+  transition: background 0.5s ease; /* Smooth background transition */
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.main {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease; /* Smooth box shadow transition */
+}
+
+.form-header {
+  text-align: center;
+  color: #006994; /* Deep Blue */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #006994; /* Deep Blue */
+}
+
+.box {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #006994; /* Deep Blue */
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+  color: #00547a; /* Darker blue text */
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+.box:focus {
+  border-color: #00547a; /* Darker blue on focus */
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit-btn {
+  background-color: #006994; /* Deep Blue */
+  color: #fff; /* White */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth button color and box shadow transitions */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+}
+
+.submit-btn:hover {
+  background-color: #00547a; /* Slightly darker blue on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Lift the button on hover */
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignUp Form - MongoDB</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6 main">
+        <form action="/signup" method="POST">
+          <h2 class="form-header">Register Yourself</h2>
+
+          <div class="form-group">
+            <label for="Name">Full Name:</label>
+            <input type="text" class="box" id="Name" name="Name" placeholder="Full Name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="City">City Name:</label>
+            <input type="text" class="box" id="City" name="City" placeholder="City Name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="Location">Complete Address:</label>
+            <input type="text" class="box" id="Location" name="Location" placeholder="Complete Address" required />
+          </div>
+
+          <div class="form-group radio-group">
+            <label for="pvt">
+              <input type="radio" class="box" id="pvt" name="Type" value="pvt" required checked>
+              PVT
+            </label>
+            <label for="govt">
+              <input type="radio" class="box" id="govt" name="Type" value="govt" required>
+              GOVT
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="Quantity">Quantity Per Month:</label>
+            <input type="number" class="box" id="Quantity" name="Quantity" placeholder="Quantity Per Month" required />
+          </div>
+
+          <div class="form-group">
+            <label for="Price">Price (INR):</label>
+            <input type="number" class="box" id="Price" name="Price" placeholder="Price(INR)" required />
+          </div>
+
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>
