@@ -1,6 +1,6 @@
 import pymongo
-import folium
 from geopy.geocoders import Nominatim
+from datetime import datetime
 
 geolocator = Nominatim(user_agent="my_geocoder")
 
@@ -16,31 +16,40 @@ def update_map():
     db = client['mydb']
     collection = db['collection1']
 
-    mapObj = folium.Map(location=[20.0, 84.0], zoom_start=7)
-    shapesLayer = folium.FeatureGroup(name="circles").add_to(mapObj)
+    html_output = """
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Google Maps</title>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDh0vh0wtcJJVTPlKwS38f64KZGydanqCs"></script>
+    </head>
+    <body>
+        <div id="map" style="height: 400px; width: 150%;"></div>
+        <script>
+            function initMap() {
+                var mapOptions = {
+                    center: { lat: 20.0, lng: 84.0 },
+                    zoom: 7
+                };
+                var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-    alldoc = collection.find({"City": "Berhampur"}, {'Name': 1, 'Location': 1, 'Image_URL': 1, '_id': 0})
-    
-    for item in alldoc:
-        address = item['Location']
-        coordinates = get_coordinates(address)
+                // Add markers dynamically
+                // Replace this with your code to retrieve data from MongoDB and add markers
+                // Example:
+                var marker = new google.maps.Marker({
+                    position: { lat: 20.0, lng: 84.0 },
+                    map: map,
+                    title: 'Marker'
+                });
+            }
+            initMap();
+        </script>
+    </body>
+    </html>
+    """
 
-        if coordinates:
-            lat, lon = coordinates
-            image_url = item.get('Image_URL', "https://example.com/default_image.jpg")
-
-            popup_content = f"""<h2>{item['Name']}</h2><br/>
-                                <b>{address}</b><br/>
-                                <img src="{image_url}" alt="Image" style="max-width:100%;max-height:100%">"""
-
-            folium.Marker(
-                location=[lat, lon],
-                popup=folium.Popup(popup_content, max_width=500),
-                icon=folium.Icon(color='green')
-            ).add_to(shapesLayer)
-
-    folium.LayerControl().add_to(mapObj)
-    mapObj.save('output.html')
+    with open('output.html', 'w') as f:
+        f.write(html_output)
 
 if __name__ == "__main__":
     update_map()
